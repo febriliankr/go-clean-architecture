@@ -26,3 +26,7 @@ type ShipmentUC interface {
 	UpdateShipment(req entity.UpdateShipmentRequest) (entity.UpdateShipmentResponse, error)
 	DeleteShipment(req entity.DeleteShipmentRequest) (entity.DeleteShipmentResponse, error)
 }
+
+type SeminarUC interface {
+	
+}

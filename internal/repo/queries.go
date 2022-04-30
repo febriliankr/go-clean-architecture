@@ -27,3 +27,12 @@ const (
 	queryUpdateShipment    = `UPDATE shipments SET no_shipment=$1, id_driver=$2, id_truck=$3, origin=$4, destination=$5, status=$6, loading_date=$7, updated_at=$9 WHERE id=$10`
 	queryDeleteShipment    = `UPDATE shipment deleted_at=$1 WHERE id=$2`
 )
+
+// Payment
+const (
+	queryCreateNewPayment = `INSERT INTO payments(unique_code, seminar_id, event_id, metode_pembayaran, ) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id`
+	queryGetAllPayments   = `SELECT * FROM payments WHERE ($1 = '' OR license_number ILIKE $1) AND  ($1 = '' OR payment_type ILIKE $2) OFFSET $3 LIMIT $4`
+	queryGetPaymentById   = `SELECT * FROM payments WHERE id=$1`
+	queryUpdatePayment    = `UPDATE payments SET payment_expired_timestamp=$1, payment_reminder_timestamp=$2, event_reminder_timestamp=$3, bukti_pembayaran_url=$4 updated_at=now() WHERE id=$5`
+	queryDeletePayment    = `UPDATE payments hidden=true WHERE id=$1` // SOFT DELETE
+)

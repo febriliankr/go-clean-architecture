@@ -26,3 +26,11 @@ type ShipmentRepo interface {
 	UpdateShipment(req entity.UpdateShipmentRequest) (entity.UpdateShipmentResponse, error)
 	DeleteShipment(req entity.DeleteShipmentRequest) (entity.DeleteShipmentResponse, error)
 }
+
+type PaymentRepo interface {
+	CreateNewPayment(req entity.CreateNewPaymentRequest) (entity.CreateNewPaymentResponse, error)
+	GetPaymentList(req entity.GetPaymentListRequest) (entity.GetPaymentListResponse, error)
+	GetPaymentByID(req entity.GetPaymentByIDRequest) (entity.GetPaymentByIDResponse, error)
+	UpdatePayment(req entity.UpdatePaymentRequest) (entity.UpdatePaymentResponse, error)
+	DeletePayment(req entity.DeletePaymentRequest) (entity.DeletePaymentResponse, error)
+}
