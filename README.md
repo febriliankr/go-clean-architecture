@@ -1,2 +1,1 @@
-# tms-backend
-kargo hackathon
+# Go Rest Clean Architecture
