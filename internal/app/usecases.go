@@ -10,6 +10,7 @@ type Usecases struct {
 	DriverUC   internal.DriverUC
 	ShipmentUC internal.ShipmentUC
 	TruckUC    internal.TruckUC
+	PaymentUC  internal.PaymentUC
 }
 
 // Inject dependency for usecase layer

@@ -14,7 +14,8 @@ type TruckService struct {
 	uc internal.TruckUC
 }
 
-func NewTruckService(app *app.ShipmentApp) *TruckService {
+
+func NewTruckService(app *app.SeminarApp) *TruckService {
 	return &TruckService{
 		uc: app.Usecases.TruckUC,
 	}

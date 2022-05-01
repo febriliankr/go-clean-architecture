@@ -14,7 +14,7 @@ type DriverService struct {
 	uc internal.DriverUC
 }
 
-func NewDriverService(app *app.ShipmentApp) *DriverService {
+func NewDriverService(app *app.SeminarApp) *DriverService {
 	return &DriverService{
 		uc: app.Usecases.DriverUC,
 	}

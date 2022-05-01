@@ -7,7 +7,7 @@ import (
 )
 
 // Start server
-func Start(app *app.ShipmentApp) {
+func Start(app *app.SeminarApp) {
 	srv := server.New()
 	svc := service.GetServices(app)
 
@@ -35,6 +35,15 @@ func Start(app *app.ShipmentApp) {
 	shipments.POST("/allocate", svc.AllocateShipmentHandler)
 	shipments.PUT("/:id", svc.UpdateShipmentHandler)
 	shipments.DELETE("/:id", svc.DeleteShipmentHandler)
+
+	// Init Payments Handlers
+	payments := srv.Group("/payments")
+
+	payments.GET("", svc.GetPaymentListHandler)
+	payments.GET("/:id", svc.GetPaymentByIDHandler)
+	payments.POST("", svc.CreateNewPaymentHandler)
+	payments.PUT("/:id", svc.UpdatePaymentHandler)
+	payments.DELETE("/:id", svc.DeletePaymentHandler)
 
 	server.Start(srv, &app.Cfg.Server)
 }

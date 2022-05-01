@@ -8,12 +8,14 @@ type Services struct {
 	*DriverService
 	*ShipmentService
 	*TruckService
+	*PaymentService
 }
 
-func GetServices(app *app.ShipmentApp) *Services {
+func GetServices(app *app.SeminarApp) *Services {
 	return &Services{
 		DriverService:   NewDriverService(app),
 		ShipmentService: NewShipmentService(app),
 		TruckService:    NewTruckService(app),
+		PaymentService:  NewPaymentService(app),
 	}
 }

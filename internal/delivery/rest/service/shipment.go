@@ -15,7 +15,7 @@ type ShipmentService struct {
 	uc internal.ShipmentUC
 }
 
-func NewShipmentService(app *app.ShipmentApp) *ShipmentService {
+func NewShipmentService(app *app.SeminarApp) *ShipmentService {
 	return &ShipmentService{
 		uc: app.Usecases.ShipmentUC,
 	}

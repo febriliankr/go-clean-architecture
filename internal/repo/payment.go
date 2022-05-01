@@ -30,6 +30,7 @@ func (r *PaymentDB) CreateNewPayment(req entity.CreateNewPaymentRequest) (entity
 }
 
 func (r *PaymentDB) GetPaymentList(req entity.GetPaymentListRequest) (entity.GetPaymentListResponse, error) {
+
 	var res entity.GetPaymentListResponse
 	query := queryGetAllPayments
 
