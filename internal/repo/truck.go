@@ -1,8 +1,8 @@
 package repo
 
 import (
+	"github.com/febriliankr/go-clean-architecture/internal/entity"
 	"github.com/jmoiron/sqlx"
-	"github.com/ridwanakf/tms-backend/internal/entity"
 )
 
 type TruckDB struct {

@@ -7,11 +7,11 @@ import (
 	"os/signal"
 	"time"
 
+	"github.com/febriliankr/go-clean-architecture/internal/app/config"
+	"github.com/febriliankr/go-clean-architecture/internal/delivery/rest/middleware"
 	"github.com/go-playground/validator"
 	"github.com/labstack/echo/v4"
 	md "github.com/labstack/echo/v4/middleware"
-	"github.com/ridwanakf/tms-backend/internal/app/config"
-	"github.com/ridwanakf/tms-backend/internal/delivery/rest/middleware"
 )
 
 // New instantiates new Echo server

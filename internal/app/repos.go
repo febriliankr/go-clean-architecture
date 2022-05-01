@@ -3,11 +3,11 @@ package app
 import (
 	"log"
 
+	"github.com/febriliankr/go-clean-architecture/internal"
+	"github.com/febriliankr/go-clean-architecture/internal/app/config"
+	"github.com/febriliankr/go-clean-architecture/internal/repo"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
-	"github.com/ridwanakf/tms-backend/internal"
-	"github.com/ridwanakf/tms-backend/internal/app/config"
-	"github.com/ridwanakf/tms-backend/internal/repo"
 )
 
 type Repos struct {

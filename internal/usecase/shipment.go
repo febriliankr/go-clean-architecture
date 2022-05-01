@@ -1,10 +1,11 @@
 package usecase
 
 import (
-	"github.com/ridwanakf/tms-backend/internal"
-	"github.com/ridwanakf/tms-backend/internal/entity"
 	"math/rand"
 	"time"
+
+	"github.com/febriliankr/go-clean-architecture/internal"
+	"github.com/febriliankr/go-clean-architecture/internal/entity"
 )
 
 type ShipmentUsecase struct {

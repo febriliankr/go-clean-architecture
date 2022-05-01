@@ -1,9 +1,9 @@
 package app
 
 import (
-	"github.com/ridwanakf/tms-backend/internal"
-	"github.com/ridwanakf/tms-backend/internal/app/config"
-	"github.com/ridwanakf/tms-backend/internal/usecase"
+	"github.com/febriliankr/go-clean-architecture/internal"
+	"github.com/febriliankr/go-clean-architecture/internal/app/config"
+	"github.com/febriliankr/go-clean-architecture/internal/usecase"
 )
 
 type Usecases struct {

@@ -1,7 +1,7 @@
 package service
 
 import (
-	"github.com/ridwanakf/tms-backend/internal/app"
+	"github.com/febriliankr/go-clean-architecture/internal/app"
 )
 
 type Services struct {

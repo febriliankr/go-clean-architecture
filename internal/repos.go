@@ -1,6 +1,6 @@
 package internal
 
-import "github.com/ridwanakf/tms-backend/internal/entity"
+import "github.com/febriliankr/go-clean-architecture/internal/entity"
 
 type TruckRepo interface {
 	CreateNewTruck(req entity.CreateNewTruckRequest) (entity.CreateNewTruckResponse, error)

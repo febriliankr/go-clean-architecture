@@ -1,9 +1,9 @@
 package rest
 
 import (
-	"github.com/ridwanakf/tms-backend/internal/app"
-	"github.com/ridwanakf/tms-backend/internal/delivery/rest/server"
-	"github.com/ridwanakf/tms-backend/internal/delivery/rest/service"
+	"github.com/febriliankr/go-clean-architecture/internal/app"
+	"github.com/febriliankr/go-clean-architecture/internal/delivery/rest/server"
+	"github.com/febriliankr/go-clean-architecture/internal/delivery/rest/service"
 )
 
 // Start server

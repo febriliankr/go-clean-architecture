@@ -2,8 +2,8 @@ package app
 
 import (
 	"github.com/caarlos0/env/v6"
+	"github.com/febriliankr/go-clean-architecture/internal/app/config"
 	"github.com/pkg/errors"
-	"github.com/ridwanakf/tms-backend/internal/app/config"
 )
 
 type ShipmentApp struct {

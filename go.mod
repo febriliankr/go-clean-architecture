@@ -1,4 +1,4 @@
-module github.com/ridwanakf/tms-backend
+module github.com/febriliankr/go-clean-architecture
 
 go 1.13
 

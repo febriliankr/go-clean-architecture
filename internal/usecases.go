@@ -1,6 +1,6 @@
 package internal
 
-import "github.com/ridwanakf/tms-backend/internal/entity"
+import "github.com/febriliankr/go-clean-architecture/internal/entity"
 
 type TruckUC interface {
 	CreateNewTruck(req entity.CreateNewTruckRequest) (entity.CreateNewTruckResponse, error)
@@ -28,5 +28,4 @@ type ShipmentUC interface {
 }
 
 type SeminarUC interface {
-	
 }

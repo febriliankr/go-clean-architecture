@@ -1,13 +1,14 @@
 package service
 
 import (
-	"github.com/ridwanakf/tms-backend/internal/entity"
 	"net/http"
 	"strconv"
 
+	"github.com/febriliankr/go-clean-architecture/internal/entity"
+
+	"github.com/febriliankr/go-clean-architecture/internal"
+	"github.com/febriliankr/go-clean-architecture/internal/app"
 	"github.com/labstack/echo/v4"
-	"github.com/ridwanakf/tms-backend/internal"
-	"github.com/ridwanakf/tms-backend/internal/app"
 )
 
 type ShipmentService struct {

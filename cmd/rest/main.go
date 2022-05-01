@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
+	"github.com/febriliankr/go-clean-architecture/internal/app"
+	"github.com/febriliankr/go-clean-architecture/internal/delivery/rest"
 	"github.com/joho/godotenv"
-	"github.com/ridwanakf/tms-backend/internal/app"
-	"github.com/ridwanakf/tms-backend/internal/delivery/rest"
 )
 
 func main() {

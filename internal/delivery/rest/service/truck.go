@@ -4,10 +4,10 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/febriliankr/go-clean-architecture/internal"
+	"github.com/febriliankr/go-clean-architecture/internal/app"
+	"github.com/febriliankr/go-clean-architecture/internal/entity"
 	"github.com/labstack/echo/v4"
-	"github.com/ridwanakf/tms-backend/internal"
-	"github.com/ridwanakf/tms-backend/internal/app"
-	"github.com/ridwanakf/tms-backend/internal/entity"
 )
 
 type TruckService struct {
