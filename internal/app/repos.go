@@ -29,7 +29,6 @@ func newRepos(cfg config.Config) (*Repos, error) {
 
 func initDB(cfg config.Config) (*sqlx.DB, error) {
 	// Connect SQL DB
-
 	db, err := sqlx.Connect(cfg.DB.Driver, cfg.DB.Address)
 	if err != nil {
 		return nil, err

@@ -38,7 +38,6 @@ func Start(app *app.SeminarApp) {
 
 	// Init Payments Handlers
 	payments := srv.Group("/payments")
-
 	payments.GET("", svc.GetPaymentListHandler)
 	payments.GET("/:id", svc.GetPaymentByIDHandler)
 	payments.POST("", svc.CreateNewPaymentHandler)
