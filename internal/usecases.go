@@ -27,5 +27,10 @@ type ShipmentUC interface {
 	DeleteShipment(req entity.DeleteShipmentRequest) (entity.DeleteShipmentResponse, error)
 }
 
-type SeminarUC interface {
+type PaymentUC interface {
+	CreateNewPayment(req entity.CreateNewPaymentRequest) (entity.CreateNewPaymentResponse, error)
+	GetPaymentList(req entity.GetPaymentListRequest) (entity.GetPaymentListResponse, error)
+	GetPaymentByID(req entity.GetPaymentByIDRequest) (entity.GetPaymentByIDResponse, error)
+	UpdatePayment(req entity.UpdatePaymentRequest) (entity.UpdatePaymentResponse, error)
+	DeletePayment(req entity.DeletePaymentRequest) (entity.DeletePaymentResponse, error)
 }
