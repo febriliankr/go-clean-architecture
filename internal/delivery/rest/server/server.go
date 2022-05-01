@@ -56,7 +56,7 @@ func Start(e *echo.Echo, cfg *config.Server) {
 
 	// Wait for interrupt signal to gracefully shutdown the server with
 	// a timeout of 10 seconds.
-	quit := make(chan os.Signal)
+	quit := make(chan os.Signal, 4)
 	signal.Notify(quit, os.Interrupt)
 	<-quit
 	e.Logger.Info("shutting down the server...")
