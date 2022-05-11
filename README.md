@@ -1,5 +1,9 @@
 # Go Rest Clean Architecture
 
-Still learning from this Ridwan's TMS backend. I was religiously learning his code, turns out he stole some of the codes too lol.
+Finding the best recipe for architecture
 
-Ridwan: wkwkw some of the server/ code gua ambil pas magang di shopee wkwk
+## Normalizing SQL
+```
+UPDATE payments SET bank_account_name='' WHERE bank_account_name IS NULL;
+UPDATE payments SET user_email='' WHERE user_email IS NULL;
+```

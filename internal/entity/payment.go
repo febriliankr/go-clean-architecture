@@ -19,19 +19,17 @@ type Payment struct {
 	EventReminderTimestamp   string `json:"event_reminder_timestamp" db:"event_reminder_timestamp"`
 	BankAccountNumber        string `json:"bank_account_number" db:"bank_account_number"`
 	BankAccountName          string `json:"bank_account_name" db:"bank_account_name"`
-	Hidden                   bool   `json:"hidden" db:"hidden"`
+	Hidden                   bool   `json:"-" db:"hidden"`
 }
 
 // Requests
 type (
 	CreateNewPaymentRequest struct {
-		UserEmail          string `json:"user_email" db:"user_email"`
-		UniqueCode         string `json:"unique_code" db:"unique_code"`
-		BuktiPembayaranUrl string `json:"bukti_pembayaran_url" db:"bukti_pembayaran_url"`
-		MetodePembayaran   string `json:"metode_pembayaran" db:"metode_pembayaran"`
-		BankAccountNumber  string `json:"bank_account_number" db:"bank_account_number"`
-		BankAccountName    string `json:"bank_account_name" db:"bank_account_name"`
-		Hidden             bool   `json:"hidden" db:"hidden"`
+		UserEmail         string `json:"user_email" db:"user_email"`
+		UniqueCode        string `json:"unique_code" db:"unique_code"`
+		MetodePembayaran  string `json:"metode_pembayaran" db:"metode_pembayaran"`
+		BankAccountNumber string `json:"bank_account_number" db:"bank_account_number"`
+		BankAccountName   string `json:"bank_account_name" db:"bank_account_name"`
 	}
 
 	GetPaymentListRequest struct {

@@ -14,12 +14,15 @@ type Usecases struct {
 }
 
 // Inject dependency for usecase layer
-func newUsecases(cfg config.Config, repos *Repos) (*Usecases, error) {
-	return &Usecases{
-		DriverUC:   usecase.NewDriverUsecase(repos.DriverRepo),
+func newUsecases(cfg config.Config, repos *Repos) *Usecases {
+	driverUC := usecase.NewDriverUsecase(repos.DriverRepo)
+	uc := &Usecases{
+		DriverUC:   driverUC,
 		ShipmentUC: usecase.NewShipmentUsecase(repos.ShipmentRepo),
 		TruckUC:    usecase.NewTruckUsecase(repos.TruckRepo),
-	}, nil
+		PaymentUC:  usecase.NewPaymentUsecase(repos.PaymentRepo),
+	}
+	return uc
 }
 
 func (*Usecases) Close() []error {

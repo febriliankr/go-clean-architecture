@@ -29,7 +29,7 @@ func NewSeminarApp() (*SeminarApp, error) {
 		return nil, errors.Wrapf(err, "errors invoking newRepos")
 	}
 
-	app.Usecases, err = newUsecases(cfg, app.Repos)
+	app.Usecases = newUsecases(cfg, app.Repos)
 	if err != nil {
 		return nil, errors.Wrapf(err, "errors invoking newUsecases")
 	}

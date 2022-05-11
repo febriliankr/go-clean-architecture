@@ -12,6 +12,7 @@ type Repos struct {
 	DriverRepo   internal.DriverRepo
 	ShipmentRepo internal.ShipmentRepo
 	TruckRepo    internal.TruckRepo
+	PaymentRepo  internal.PaymentRepo
 }
 
 // Inject dependency for repository layer
@@ -24,6 +25,7 @@ func newRepos(cfg config.Config) (*Repos, error) {
 		DriverRepo:   repo.NewDriverDB(db),
 		ShipmentRepo: repo.NewShipmentDB(db),
 		TruckRepo:    repo.NewTruckDB(db),
+		PaymentRepo:  repo.NewPaymentDB(db),
 	}, nil
 }
 

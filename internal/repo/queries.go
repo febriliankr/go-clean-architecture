@@ -30,9 +30,14 @@ const (
 
 // Payment
 const (
-	queryCreateNewPayment = `INSERT INTO payments(unique_code, seminar_id, event_id, metode_pembayaran, ) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id`
-	queryGetAllPayments   = `SELECT * FROM payments WHERE ($1 = '' OR license_number ILIKE $1) AND  ($1 = '' OR payment_type ILIKE $2) OFFSET $3 LIMIT $4`
+	queryCreateNewPayment = `INSERT INTO payments(unique_code, seminar_id, event_id, metode_pembayaran) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id`
+	queryGetAllPayments   = `SELECT * FROM payments WHERE hidden=false OFFSET $1 LIMIT $2`
 	queryGetPaymentById   = `SELECT * FROM payments WHERE id=$1`
 	queryUpdatePayment    = `UPDATE payments SET payment_expired_timestamp=$1, payment_reminder_timestamp=$2, event_reminder_timestamp=$3, bukti_pembayaran_url=$4 updated_at=now() WHERE id=$5`
 	queryDeletePayment    = `UPDATE payments hidden=true WHERE id=$1` // SOFT DELETE
+)
+
+// user
+const (
+	queryGetAllUsers = `SELECT * FROM users OFFSET $1 LIMIT $2`
 )
